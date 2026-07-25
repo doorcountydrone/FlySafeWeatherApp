@@ -7,7 +7,7 @@
   <meta name="description" content="Download the FlySafe Weather Android app for drone and aviation weather." />
   <meta property="og:title" content="FlySafe Weather" />
   <meta property="og:description" content="Drone and aviation weather — tap to download the Android app." />
-  <meta property="og:image" content="flysafe_logo.png" />
+  <meta property="og:image" content="flysafe_weather_splash.png" />
   <link rel="icon" href="flysafe_logo.png" />
   <style>
     :root {
@@ -29,41 +29,18 @@
 
     body {
       min-height: 100dvh;
-      display: grid;
-      place-items: center;
-      padding: 1.5rem;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 1.5rem 1.5rem 2rem;
       background:
-        linear-gradient(180deg, rgba(10, 26, 51, 0.55) 0%, rgba(10, 26, 51, 0.82) 55%, rgba(10, 26, 51, 0.95) 100%),
-        url("flysafe_background.jpg") center / cover no-repeat;
+        linear-gradient(180deg, rgba(10, 26, 51, 0.04) 0%, rgba(10, 26, 51, 0.04) 68%, rgba(10, 26, 51, 0.88) 100%),
+        url("flysafe_weather_splash.png") center top / cover no-repeat;
     }
 
     main {
       width: min(22rem, 100%);
       text-align: center;
-    }
-
-    .logo {
-      width: min(11rem, 70vw);
-      height: auto;
-      border-radius: 1.5rem;
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
-      margin-bottom: 1.25rem;
-    }
-
-    h1 {
-      margin: 0 0 0.35rem;
-      font-size: 1.75rem;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-    }
-
-    h1 span { color: var(--sky); }
-
-    p {
-      margin: 0 0 1.5rem;
-      color: rgba(240, 245, 255, 0.85);
-      line-height: 1.45;
-      font-size: 1rem;
     }
 
     .download {
@@ -99,9 +76,6 @@
 </head>
 <body>
   <main>
-    <img class="logo" src="flysafe_logo.png" alt="FlySafe Weather" width="220" height="220" />
-    <h1>FlySafe <span>Weather</span></h1>
-    <p>Drone and aviation weather on your phone. Tap below to download the Android app.</p>
     <a
       class="download"
       href="https://github.com/doorcountydrone/FlySafeWeatherApp/releases/latest/download/FlySafeWeather.apk"
