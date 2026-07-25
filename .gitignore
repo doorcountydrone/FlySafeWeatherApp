@@ -1,0 +1,31 @@
+*.iml
+.gradle
+/.gradle
+.kotlin
+.vscode
+/.idea
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+Thumbs.db
+/build
+/app/build
+/captures
+.externalNativeBuild
+.cxx
+
+# Local machine + secret config (never commit)
+local.properties
+secrets.properties
+keystore.properties
+*.jks
+*.keystore
+
+# Build artifacts — APKs are published through GitHub Releases
+*.apk
+app/release/
+app/debug/

@@ -1,0 +1,2034 @@
+{
+  "airports": [
+    {
+      "icao": "KGRB",
+      "name": "Green Bay Austin Straubel International",
+      "latitude": 44.4851,
+      "longitude": -88.1296,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 4300,
+      "city": {
+        "name": "Green Bay",
+        "latitude": 44.5133,
+        "longitude": -88.0133,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KMKE",
+      "name": "Milwaukee Mitchell International",
+      "latitude": 42.9472,
+      "longitude": -87.8966,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 4800,
+      "city": {
+        "name": "Milwaukee",
+        "latitude": 43.0389,
+        "longitude": -87.9065,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KMSN",
+      "name": "Dane County Regional",
+      "latitude": 43.1399,
+      "longitude": -89.3375,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 4300,
+      "city": {
+        "name": "Madison",
+        "latitude": 43.0731,
+        "longitude": -89.4012,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KORD",
+      "name": "Chicago O'Hare International",
+      "latitude": 41.9786,
+      "longitude": -87.9048,
+      "airspaceClass": "B",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 10000,
+      "city": {
+        "name": "Chicago",
+        "latitude": 41.8781,
+        "longitude": -87.6298,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KMDW",
+      "name": "Chicago Midway International",
+      "latitude": 41.7860,
+      "longitude": -87.7524,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 4300,
+      "city": {
+        "name": "Chicago",
+        "latitude": 41.8781,
+        "longitude": -87.6298,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KDTW",
+      "name": "Detroit Metropolitan Wayne County",
+      "latitude": 42.2124,
+      "longitude": -83.3534,
+      "airspaceClass": "B",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 10000,
+      "city": {
+        "name": "Detroit",
+        "latitude": 42.3314,
+        "longitude": -83.0458,
+        "timeZoneId": "America/Detroit"
+      }
+    },
+    {
+      "icao": "KGRR",
+      "name": "Gerald R. Ford International",
+      "latitude": 42.8808,
+      "longitude": -85.5228,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 4300,
+      "city": {
+        "name": "Grand Rapids",
+        "latitude": 42.9634,
+        "longitude": -85.6681,
+        "timeZoneId": "America/Detroit"
+      }
+    },
+    {
+      "icao": "KMSP",
+      "name": "Minneapolis-Saint Paul International",
+      "latitude": 44.8820,
+      "longitude": -93.2218,
+      "airspaceClass": "B",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 10000,
+      "city": {
+        "name": "Minneapolis",
+        "latitude": 44.9778,
+        "longitude": -93.2650,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KSTL",
+      "name": "St. Louis Lambert International",
+      "latitude": 38.7487,
+      "longitude": -90.3700,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 4300,
+      "city": {
+        "name": "St. Louis",
+        "latitude": 38.6270,
+        "longitude": -90.1994,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KMCI",
+      "name": "Kansas City International",
+      "latitude": 39.2976,
+      "longitude": -94.7139,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 4300,
+      "city": {
+        "name": "Kansas City",
+        "latitude": 39.0997,
+        "longitude": -94.5786,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KJFK",
+      "name": "John F. Kennedy International",
+      "latitude": 40.6413,
+      "longitude": -73.7781,
+      "airspaceClass": "B",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 10000,
+      "city": {
+        "name": "New York",
+        "latitude": 40.7128,
+        "longitude": -74.0060,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KLGA",
+      "name": "LaGuardia Airport",
+      "latitude": 40.7769,
+      "longitude": -73.8740,
+      "airspaceClass": "B",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 7000,
+      "city": {
+        "name": "New York",
+        "latitude": 40.7128,
+        "longitude": -74.0060,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KBOS",
+      "name": "Boston Logan International",
+      "latitude": 42.3656,
+      "longitude": -71.0096,
+      "airspaceClass": "B",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 7000,
+      "city": {
+        "name": "Boston",
+        "latitude": 42.3601,
+        "longitude": -71.0589,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KATL",
+      "name": "Hartsfield-Jackson Atlanta International",
+      "latitude": 33.6407,
+      "longitude": -84.4277,
+      "airspaceClass": "B",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 12500,
+      "city": {
+        "name": "Atlanta",
+        "latitude": 33.7490,
+        "longitude": -84.3880,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KMIA",
+      "name": "Miami International",
+      "latitude": 25.7932,
+      "longitude": -80.2906,
+      "airspaceClass": "B",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 7000,
+      "city": {
+        "name": "Miami",
+        "latitude": 25.7617,
+        "longitude": -80.1918,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KDFW",
+      "name": "Dallas/Fort Worth International",
+      "latitude": 32.8998,
+      "longitude": -97.0403,
+      "airspaceClass": "B",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 11000,
+      "city": {
+        "name": "Dallas",
+        "latitude": 32.7767,
+        "longitude": -96.7970,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KIAH",
+      "name": "George Bush Intercontinental",
+      "latitude": 29.9902,
+      "longitude": -95.3368,
+      "airspaceClass": "B",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 10000,
+      "city": {
+        "name": "Houston",
+        "latitude": 29.7604,
+        "longitude": -95.3698,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KDEN",
+      "name": "Denver International",
+      "latitude": 39.8561,
+      "longitude": -104.6737,
+      "airspaceClass": "B",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 12000,
+      "city": {
+        "name": "Denver",
+        "latitude": 39.7392,
+        "longitude": -104.9903,
+        "timeZoneId": "America/Denver"
+      }
+    },
+    {
+      "icao": "KPHX",
+      "name": "Phoenix Sky Harbor International",
+      "latitude": 33.4352,
+      "longitude": -112.0101,
+      "airspaceClass": "B",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 9000,
+      "city": {
+        "name": "Phoenix",
+        "latitude": 33.4484,
+        "longitude": -112.0740,
+        "timeZoneId": "America/Phoenix"
+      }
+    },
+    {
+      "icao": "KLAX",
+      "name": "Los Angeles International",
+      "latitude": 33.9416,
+      "longitude": -118.4085,
+      "airspaceClass": "B",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 10000,
+      "city": {
+        "name": "Los Angeles",
+        "latitude": 34.0522,
+        "longitude": -118.2437,
+        "timeZoneId": "America/Los_Angeles"
+      }
+    },
+    {
+      "icao": "KSFO",
+      "name": "San Francisco International",
+      "latitude": 37.6213,
+      "longitude": -122.3790,
+      "airspaceClass": "B",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 10000,
+      "city": {
+        "name": "San Francisco",
+        "latitude": 37.7749,
+        "longitude": -122.4194,
+        "timeZoneId": "America/Los_Angeles"
+      }
+    },
+    {
+      "icao": "KSEA",
+      "name": "Seattle-Tacoma International",
+      "latitude": 47.4502,
+      "longitude": -122.3088,
+      "airspaceClass": "B",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 10000,
+      "city": {
+        "name": "Seattle",
+        "latitude": 47.6062,
+        "longitude": -122.3321,
+        "timeZoneId": "America/Los_Angeles"
+      }
+    },
+    {
+      "icao": "KBWI",
+      "name": "Baltimore/Washington International",
+      "latitude": 39.1754,
+      "longitude": -76.6682,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 4000,
+      "city": {
+        "name": "Baltimore",
+        "latitude": 39.2904,
+        "longitude": -76.6122,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KPDX",
+      "name": "Portland International",
+      "latitude": 45.5898,
+      "longitude": -122.5951,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 4000,
+      "city": {
+        "name": "Portland",
+        "latitude": 45.5155,
+        "longitude": -122.6789,
+        "timeZoneId": "America/Los_Angeles"
+      }
+    },
+    {
+      "icao": "KSAN",
+      "name": "San Diego International",
+      "latitude": 32.7336,
+      "longitude": -117.1897,
+      "airspaceClass": "B",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 8000,
+      "city": {
+        "name": "San Diego",
+        "latitude": 32.7157,
+        "longitude": -117.1611,
+        "timeZoneId": "America/Los_Angeles"
+      }
+    },
+    {
+      "icao": "KOSH",
+      "name": "Wittman Regional Airport",
+      "latitude": 43.9844,
+      "longitude": -88.5570,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3200,
+      "city": {
+        "name": "Oshkosh",
+        "latitude": 44.0247,
+        "longitude": -88.5426,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KATW",
+      "name": "Appleton International Airport",
+      "latitude": 44.2581,
+      "longitude": -88.5191,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3200,
+      "city": {
+        "name": "Appleton",
+        "latitude": 44.2619,
+        "longitude": -88.4154,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KBAF",
+      "name": "Westfield-Barnes Regional Airport",
+      "latitude": 42.1579,
+      "longitude": -72.7158,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 2500,
+      "city": {
+        "name": "Westfield",
+        "latitude": 42.1251,
+        "longitude": -72.7495,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KBED",
+      "name": "Laurence G. Hanscom Field",
+      "latitude": 42.4700,
+      "longitude": -71.2890,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 2600,
+      "city": {
+        "name": "Bedford",
+        "latitude": 42.4906,
+        "longitude": -71.2756,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KPWM",
+      "name": "Portland International Jetport",
+      "latitude": 43.6462,
+      "longitude": -70.3087,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 2800,
+      "city": {
+        "name": "Portland",
+        "latitude": 43.6591,
+        "longitude": -70.2568,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KBTV",
+      "name": "Burlington International Airport",
+      "latitude": 44.4720,
+      "longitude": -73.1533,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3000,
+      "city": {
+        "name": "Burlington",
+        "latitude": 44.4759,
+        "longitude": -73.2121,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KBDL",
+      "name": "Bradley International Airport",
+      "latitude": 41.9389,
+      "longitude": -72.6832,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3000,
+      "city": {
+        "name": "Windsor Locks",
+        "latitude": 41.9246,
+        "longitude": -72.6450,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KPVD",
+      "name": "Providence T.F. Green International Airport",
+      "latitude": 41.7240,
+      "longitude": -71.4283,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 2600,
+      "city": {
+        "name": "Providence",
+        "latitude": 41.8240,
+        "longitude": -71.4128,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KBDR",
+      "name": "Igor I. Sikorsky Memorial Airport",
+      "latitude": 41.1633,
+      "longitude": -73.1262,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 2500,
+      "city": {
+        "name": "Bridgeport",
+        "latitude": 41.1792,
+        "longitude": -73.1894,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KFRG",
+      "name": "Republic Airport",
+      "latitude": 40.7288,
+      "longitude": -73.4134,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 2500,
+      "city": {
+        "name": "Farmingdale",
+        "latitude": 40.7359,
+        "longitude": -73.4171,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KPAE",
+      "name": "Snohomish County Airport (Paine Field)",
+      "latitude": 47.9063,
+      "longitude": -122.2815,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3000,
+      "city": {
+        "name": "Everett",
+        "latitude": 47.9789,
+        "longitude": -122.2021,
+        "timeZoneId": "America/Los_Angeles"
+      }
+    },
+    {
+      "icao": "KBFI",
+      "name": "Boeing Field/King County International",
+      "latitude": 47.5299,
+      "longitude": -122.3019,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3000,
+      "city": {
+        "name": "Seattle",
+        "latitude": 47.6062,
+        "longitude": -122.3321,
+        "timeZoneId": "America/Los_Angeles"
+      }
+    },
+    {
+      "icao": "KHIO",
+      "name": "Portland-Hillsboro Airport",
+      "latitude": 45.5404,
+      "longitude": -122.9498,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 2700,
+      "city": {
+        "name": "Hillsboro",
+        "latitude": 45.5228,
+        "longitude": -122.9898,
+        "timeZoneId": "America/Los_Angeles"
+      }
+    },
+    {
+      "icao": "KAPA",
+      "name": "Centennial Airport",
+      "latitude": 39.5701,
+      "longitude": -104.8486,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3000,
+      "city": {
+        "name": "Denver",
+        "latitude": 39.7392,
+        "longitude": -104.9903,
+        "timeZoneId": "America/Denver"
+      }
+    },
+    {
+      "icao": "KFFZ",
+      "name": "Falcon Field Airport",
+      "latitude": 33.4608,
+      "longitude": -111.7284,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 2900,
+      "city": {
+        "name": "Mesa",
+        "latitude": 33.4152,
+        "longitude": -111.8315,
+        "timeZoneId": "America/Phoenix"
+      }
+    },
+    {
+      "icao": "KSDL",
+      "name": "Scottsdale Airport",
+      "latitude": 33.6228,
+      "longitude": -111.9107,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3000,
+      "city": {
+        "name": "Scottsdale",
+        "latitude": 33.4942,
+        "longitude": -111.9261,
+        "timeZoneId": "America/Phoenix"
+      }
+    },
+    {
+      "icao": "KADS",
+      "name": "Addison Airport",
+      "latitude": 32.9686,
+      "longitude": -96.8364,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3000,
+      "city": {
+        "name": "Dallas",
+        "latitude": 32.7767,
+        "longitude": -96.7970,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KFTW",
+      "name": "Fort Worth Meacham International",
+      "latitude": 32.8198,
+      "longitude": -97.3624,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3000,
+      "city": {
+        "name": "Fort Worth",
+        "latitude": 32.7555,
+        "longitude": -97.3308,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KSGR",
+      "name": "Sugar Land Regional Airport",
+      "latitude": 29.6227,
+      "longitude": -95.6566,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 2600,
+      "city": {
+        "name": "Sugar Land",
+        "latitude": 29.6197,
+        "longitude": -95.6349,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KPDK",
+      "name": "DeKalb-Peachtree Airport",
+      "latitude": 33.8756,
+      "longitude": -84.3020,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3000,
+      "city": {
+        "name": "Atlanta",
+        "latitude": 33.7490,
+        "longitude": -84.3880,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KLAS",
+      "name": "Harry Reid International",
+      "latitude": 36.0840,
+      "longitude": -115.1537,
+      "airspaceClass": "B",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 10000,
+      "city": {
+        "name": "Las Vegas",
+        "latitude": 36.1699,
+        "longitude": -115.1398,
+        "timeZoneId": "America/Los_Angeles"
+      }
+    },
+    {
+      "icao": "KCLT",
+      "name": "Charlotte Douglas International",
+      "latitude": 35.2144,
+      "longitude": -80.9473,
+      "airspaceClass": "B",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 10000,
+      "city": {
+        "name": "Charlotte",
+        "latitude": 35.2271,
+        "longitude": -80.8431,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KSLC",
+      "name": "Salt Lake City International",
+      "latitude": 40.7884,
+      "longitude": -111.9778,
+      "airspaceClass": "B",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 12000,
+      "city": {
+        "name": "Salt Lake City",
+        "latitude": 40.7608,
+        "longitude": -111.8910,
+        "timeZoneId": "America/Denver"
+      }
+    },
+    {
+      "icao": "KPIT",
+      "name": "Pittsburgh International",
+      "latitude": 40.4915,
+      "longitude": -80.2329,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 5000,
+      "city": {
+        "name": "Pittsburgh",
+        "latitude": 40.4406,
+        "longitude": -79.9959,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KCVG",
+      "name": "Cincinnati/Northern Kentucky International",
+      "latitude": 39.0489,
+      "longitude": -84.6678,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 5000,
+      "city": {
+        "name": "Cincinnati",
+        "latitude": 39.1031,
+        "longitude": -84.5120,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KBNA",
+      "name": "Nashville International",
+      "latitude": 36.1245,
+      "longitude": -86.6782,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 4700,
+      "city": {
+        "name": "Nashville",
+        "latitude": 36.1627,
+        "longitude": -86.7816,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KPSP",
+      "name": "Palm Springs International",
+      "latitude": 33.8297,
+      "longitude": -116.5066,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3000,
+      "city": {
+        "name": "Palm Springs",
+        "latitude": 33.8303,
+        "longitude": -116.5453,
+        "timeZoneId": "America/Los_Angeles"
+      }
+    },
+    {
+      "icao": "KBUR",
+      "name": "Hollywood Burbank Airport",
+      "latitude": 34.2007,
+      "longitude": -118.3590,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3000,
+      "city": {
+        "name": "Burbank",
+        "latitude": 34.1808,
+        "longitude": -118.3090,
+        "timeZoneId": "America/Los_Angeles"
+      }
+    },
+    {
+      "icao": "KONT",
+      "name": "Ontario International",
+      "latitude": 34.0558,
+      "longitude": -117.6011,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3000,
+      "city": {
+        "name": "Ontario",
+        "latitude": 34.0633,
+        "longitude": -117.6509,
+        "timeZoneId": "America/Los_Angeles"
+      }
+    },
+    {
+      "icao": "KSAT",
+      "name": "San Antonio International",
+      "latitude": 29.5337,
+      "longitude": -98.4698,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 4800,
+      "city": {
+        "name": "San Antonio",
+        "latitude": 29.4241,
+        "longitude": -98.4936,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KAUS",
+      "name": "Austin-Bergstrom International",
+      "latitude": 30.1945,
+      "longitude": -97.6699,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 4800,
+      "city": {
+        "name": "Austin",
+        "latitude": 30.2672,
+        "longitude": -97.7431,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KIAD",
+      "name": "Washington Dulles International",
+      "latitude": 38.9445,
+      "longitude": -77.4558,
+      "airspaceClass": "B",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 10000,
+      "city": {
+        "name": "Washington",
+        "latitude": 38.8977,
+        "longitude": -77.0365,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KDCA",
+      "name": "Ronald Reagan Washington National",
+      "latitude": 38.8521,
+      "longitude": -77.0377,
+      "airspaceClass": "B",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 7000,
+      "city": {
+        "name": "Washington",
+        "latitude": 38.8977,
+        "longitude": -77.0365,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KPHL",
+      "name": "Philadelphia International",
+      "latitude": 39.8721,
+      "longitude": -75.2410,
+      "airspaceClass": "B",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 7000,
+      "city": {
+        "name": "Philadelphia",
+        "latitude": 39.9526,
+        "longitude": -75.1652,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KEWR",
+      "name": "Newark Liberty International",
+      "latitude": 40.6925,
+      "longitude": -74.1687,
+      "airspaceClass": "B",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 7000,
+      "city": {
+        "name": "Newark",
+        "latitude": 40.7357,
+        "longitude": -74.1724,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KCLE",
+      "name": "Cleveland Hopkins International",
+      "latitude": 41.4117,
+      "longitude": -81.8498,
+      "airspaceClass": "B",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 8000,
+      "city": {
+        "name": "Cleveland",
+        "latitude": 41.4993,
+        "longitude": -81.6944,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KMEM",
+      "name": "Memphis International",
+      "latitude": 35.0424,
+      "longitude": -89.9767,
+      "airspaceClass": "B",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 10000,
+      "city": {
+        "name": "Memphis",
+        "latitude": 35.1495,
+        "longitude": -90.0490,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KMCO",
+      "name": "Orlando International",
+      "latitude": 28.4294,
+      "longitude": -81.3089,
+      "airspaceClass": "B",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 10000,
+      "city": {
+        "name": "Orlando",
+        "latitude": 28.5383,
+        "longitude": -81.3792,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KTPA",
+      "name": "Tampa International",
+      "latitude": 27.9755,
+      "longitude": -82.5332,
+      "airspaceClass": "B",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 10000,
+      "city": {
+        "name": "Tampa",
+        "latitude": 27.9506,
+        "longitude": -82.4572,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KRSW",
+      "name": "Southwest Florida International",
+      "latitude": 26.5362,
+      "longitude": -81.7552,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 4000,
+      "city": {
+        "name": "Fort Myers",
+        "latitude": 26.6406,
+        "longitude": -81.8723,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KBHM",
+      "name": "Birmingham-Shuttlesworth International",
+      "latitude": 33.5629,
+      "longitude": -86.7535,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 4000,
+      "city": {
+        "name": "Birmingham",
+        "latitude": 33.5207,
+        "longitude": -86.8025,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KOAK",
+      "name": "Oakland International",
+      "latitude": 37.7214,
+      "longitude": -122.2208,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3000,
+      "city": {
+        "name": "Oakland",
+        "latitude": 37.8044,
+        "longitude": -122.2712,
+        "timeZoneId": "America/Los_Angeles"
+      }
+    },
+    {
+      "icao": "KSJC",
+      "name": "Norman Y. Mineta San Jose International",
+      "latitude": 37.3626,
+      "longitude": -121.9292,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 4000,
+      "city": {
+        "name": "San Jose",
+        "latitude": 37.3382,
+        "longitude": -121.8863,
+        "timeZoneId": "America/Los_Angeles"
+      }
+    },
+    {
+      "icao": "KSAC",
+      "name": "Sacramento Executive",
+      "latitude": 38.5127,
+      "longitude": -121.4950,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 2500,
+      "city": {
+        "name": "Sacramento",
+        "latitude": 38.5816,
+        "longitude": -121.4944,
+        "timeZoneId": "America/Los_Angeles"
+      }
+    },
+    {
+      "icao": "KSMF",
+      "name": "Sacramento International",
+      "latitude": 38.6955,
+      "longitude": -121.5907,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 4000,
+      "city": {
+        "name": "Sacramento",
+        "latitude": 38.5816,
+        "longitude": -121.4944,
+        "timeZoneId": "America/Los_Angeles"
+      }
+    },
+    {
+      "icao": "KFAT",
+      "name": "Fresno Yosemite International",
+      "latitude": 36.7762,
+      "longitude": -119.7181,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 4000,
+      "city": {
+        "name": "Fresno",
+        "latitude": 36.7378,
+        "longitude": -119.7871,
+        "timeZoneId": "America/Los_Angeles"
+      }
+    },
+    {
+      "icao": "KBOI",
+      "name": "Boise Airport",
+      "latitude": 43.5644,
+      "longitude": -116.2228,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 5000,
+      "city": {
+        "name": "Boise",
+        "latitude": 43.6150,
+        "longitude": -116.2023,
+        "timeZoneId": "America/Boise"
+      }
+    },
+    {
+      "icao": "KGEG",
+      "name": "Spokane International",
+      "latitude": 47.6199,
+      "longitude": -117.5337,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 5000,
+      "city": {
+        "name": "Spokane",
+        "latitude": 47.6588,
+        "longitude": -117.4260,
+        "timeZoneId": "America/Los_Angeles"
+      }
+    },
+    {
+      "icao": "KBIL",
+      "name": "Billings Logan International",
+      "latitude": 45.8077,
+      "longitude": -108.5429,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 5000,
+      "city": {
+        "name": "Billings",
+        "latitude": 45.7833,
+        "longitude": -108.5007,
+        "timeZoneId": "America/Denver"
+      }
+    },
+    {
+      "icao": "KICT",
+      "name": "Wichita Dwight D. Eisenhower National",
+      "latitude": 37.6499,
+      "longitude": -97.4331,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 5000,
+      "city": {
+        "name": "Wichita",
+        "latitude": 37.6872,
+        "longitude": -97.3301,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KTUL",
+      "name": "Tulsa International",
+      "latitude": 36.1984,
+      "longitude": -95.8881,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 5000,
+      "city": {
+        "name": "Tulsa",
+        "latitude": 36.1540,
+        "longitude": -95.9928,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KSUE",
+      "name": "Door County Cherryland Airport",
+      "latitude": 44.8436,
+      "longitude": -87.4215,
+      "airspaceClass": "G",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 1200,
+      "city": {
+        "name": "Sturgeon Bay",
+        "latitude": 44.8342,
+        "longitude": -87.3771,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "K3D2",
+      "name": "Ephraim-Gibraltar Airport",
+      "latitude": 45.1354,
+      "longitude": -87.1876,
+      "airspaceClass": "E",
+      "airspaceFloor": 700,
+      "airspaceCeiling": 1200,
+      "city": {
+        "name": "Ephraim",
+        "latitude": 45.1309,
+        "longitude": -87.1712,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "K2P2",
+      "name": "Washington Island Airport",
+      "latitude": 45.3864,
+      "longitude": -86.9242,
+      "airspaceClass": "E",
+      "airspaceFloor": 700,
+      "airspaceCeiling": 1200,
+      "city": {
+        "name": "Washington Island",
+        "latitude": 45.3822,
+        "longitude": -86.9293,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KOCQ",
+      "name": "J. Douglas Bake Memorial Airport",
+      "latitude": 44.8742,
+      "longitude": -87.9094,
+      "airspaceClass": "E",
+      "airspaceFloor": 700,
+      "airspaceCeiling": 1200,
+      "city": {
+        "name": "Oconto",
+        "latitude": 44.8875,
+        "longitude": -87.8686,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KMNM",
+      "name": "Menominee-Marinette Twin County Airport",
+      "latitude": 45.1267,
+      "longitude": -87.6384,
+      "airspaceClass": "E",
+      "airspaceFloor": 700,
+      "airspaceCeiling": 1200,
+      "city": {
+        "name": "Menominee",
+        "latitude": 45.1078,
+        "longitude": -87.6142,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KCLI",
+      "name": "Clintonville Municipal Airport",
+      "latitude": 44.6131,
+      "longitude": -88.7319,
+      "airspaceClass": "E",
+      "airspaceFloor": 700,
+      "airspaceCeiling": 1200,
+      "city": {
+        "name": "Clintonville",
+        "latitude": 44.6200,
+        "longitude": -88.7397,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KAIG",
+      "name": "Langlade County Airport",
+      "latitude": 45.1511,
+      "longitude": -89.1107,
+      "airspaceClass": "E",
+      "airspaceFloor": 700,
+      "airspaceCeiling": 1200,
+      "city": {
+        "name": "Antigo",
+        "latitude": 45.1403,
+        "longitude": -89.1523,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KDTW",
+      "name": "Detroit Metropolitan Wayne County",
+      "latitude": 42.2164,
+      "longitude": -83.3554,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 4000,
+      "city": {
+        "name": "Detroit",
+        "latitude": 42.3314,
+        "longitude": -83.0458,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KORD",
+      "name": "Chicago O'Hare International",
+      "latitude": 41.9786,
+      "longitude": -87.9048,
+      "airspaceClass": "B",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 7000,
+      "city": {
+        "name": "Chicago",
+        "latitude": 41.8781,
+        "longitude": -87.6298,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KCLE",
+      "name": "Cleveland Hopkins International",
+      "latitude": 41.4117,
+      "longitude": -81.8498,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 4000,
+      "city": {
+        "name": "Cleveland",
+        "latitude": 41.4993,
+        "longitude": -81.6944,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KBUF",
+      "name": "Buffalo Niagara International",
+      "latitude": 42.9405,
+      "longitude": -78.7322,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 4000,
+      "city": {
+        "name": "Buffalo",
+        "latitude": 42.8864,
+        "longitude": -78.8784,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KROC",
+      "name": "Greater Rochester International",
+      "latitude": 43.1189,
+      "longitude": -77.6724,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 4000,
+      "city": {
+        "name": "Rochester",
+        "latitude": 43.1566,
+        "longitude": -77.6088,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KSYR",
+      "name": "Syracuse Hancock International",
+      "latitude": 43.1112,
+      "longitude": -76.1063,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 4000,
+      "city": {
+        "name": "Syracuse",
+        "latitude": 43.0481,
+        "longitude": -76.1474,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KALB",
+      "name": "Albany International",
+      "latitude": 42.7483,
+      "longitude": -73.8017,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 4000,
+      "city": {
+        "name": "Albany",
+        "latitude": 42.6526,
+        "longitude": -73.7562,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KIND",
+      "name": "Indianapolis International",
+      "latitude": 39.7173,
+      "longitude": -86.2944,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 4000,
+      "city": {
+        "name": "Indianapolis",
+        "latitude": 39.7684,
+        "longitude": -86.1581,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KCMH",
+      "name": "John Glenn Columbus International",
+      "latitude": 39.9980,
+      "longitude": -82.8919,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 4000,
+      "city": {
+        "name": "Columbus",
+        "latitude": 39.9612,
+        "longitude": -82.9988,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KLAN",
+      "name": "Capital Region International",
+      "latitude": 42.7787,
+      "longitude": -84.5874,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3200,
+      "city": {
+        "name": "Lansing",
+        "latitude": 42.7325,
+        "longitude": -84.5555,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KFNT",
+      "name": "Bishop International",
+      "latitude": 42.9654,
+      "longitude": -83.7436,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3200,
+      "city": {
+        "name": "Flint",
+        "latitude": 43.0125,
+        "longitude": -83.6875,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KMKG",
+      "name": "Muskegon County Airport",
+      "latitude": 43.1695,
+      "longitude": -86.2382,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3200,
+      "city": {
+        "name": "Muskegon",
+        "latitude": 43.2342,
+        "longitude": -86.2484,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KCMI",
+      "name": "University of Illinois Willard",
+      "latitude": 40.0392,
+      "longitude": -88.2781,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3200,
+      "city": {
+        "name": "Champaign",
+        "latitude": 40.1164,
+        "longitude": -88.2434,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KMLI",
+      "name": "Quad City International",
+      "latitude": 41.4485,
+      "longitude": -90.5075,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3200,
+      "city": {
+        "name": "Moline",
+        "latitude": 41.5067,
+        "longitude": -90.5151,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KCID",
+      "name": "The Eastern Iowa",
+      "latitude": 41.8847,
+      "longitude": -91.7108,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3200,
+      "city": {
+        "name": "Cedar Rapids",
+        "latitude": 41.9778,
+        "longitude": -91.6656,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KDSM",
+      "name": "Des Moines International",
+      "latitude": 41.5340,
+      "longitude": -93.6631,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3200,
+      "city": {
+        "name": "Des Moines",
+        "latitude": 41.5868,
+        "longitude": -93.6250,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KOMA",
+      "name": "Eppley Airfield",
+      "latitude": 41.3032,
+      "longitude": -95.8941,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3200,
+      "city": {
+        "name": "Omaha",
+        "latitude": 41.2565,
+        "longitude": -95.9345,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KFSD",
+      "name": "Joe Foss Field",
+      "latitude": 43.5820,
+      "longitude": -96.7419,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3200,
+      "city": {
+        "name": "Sioux Falls",
+        "latitude": 43.5446,
+        "longitude": -96.7311,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KDLH",
+      "name": "Duluth International",
+      "latitude": 46.8421,
+      "longitude": -92.1936,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3200,
+      "city": {
+        "name": "Duluth",
+        "latitude": 46.7867,
+        "longitude": -92.1005,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KRST",
+      "name": "Rochester International",
+      "latitude": 43.9083,
+      "longitude": -92.5000,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3200,
+      "city": {
+        "name": "Rochester",
+        "latitude": 44.0216,
+        "longitude": -92.4699,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KFAR",
+      "name": "Hector International",
+      "latitude": 46.9207,
+      "longitude": -96.8158,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3200,
+      "city": {
+        "name": "Fargo",
+        "latitude": 46.8772,
+        "longitude": -96.7898,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KBIS",
+      "name": "Bismarck Municipal",
+      "latitude": 46.7727,
+      "longitude": -100.7460,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3200,
+      "city": {
+        "name": "Bismarck",
+        "latitude": 46.8083,
+        "longitude": -100.7837,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KJAX",
+      "name": "Jacksonville International",
+      "latitude": 30.4941,
+      "longitude": -81.6879,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 4000,
+      "city": {
+        "name": "Jacksonville",
+        "latitude": 30.3322,
+        "longitude": -81.6557,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KPBI",
+      "name": "Palm Beach International",
+      "latitude": 26.6832,
+      "longitude": -80.0956,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 4000,
+      "city": {
+        "name": "West Palm Beach",
+        "latitude": 26.7153,
+        "longitude": -80.0534,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KFLL",
+      "name": "Fort Lauderdale-Hollywood International",
+      "latitude": 26.0726,
+      "longitude": -80.1528,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 4000,
+      "city": {
+        "name": "Fort Lauderdale",
+        "latitude": 26.1224,
+        "longitude": -80.1373,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KPNS",
+      "name": "Pensacola International",
+      "latitude": 30.4734,
+      "longitude": -87.1866,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3000,
+      "city": {
+        "name": "Pensacola",
+        "latitude": 30.4213,
+        "longitude": -87.2169,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KTLH",
+      "name": "Tallahassee International",
+      "latitude": 30.3965,
+      "longitude": -84.3503,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3000,
+      "city": {
+        "name": "Tallahassee",
+        "latitude": 30.4383,
+        "longitude": -84.2807,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KGNV",
+      "name": "Gainesville Regional",
+      "latitude": 29.6900,
+      "longitude": -82.2718,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3000,
+      "city": {
+        "name": "Gainesville",
+        "latitude": 29.6516,
+        "longitude": -82.3248,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KDAB",
+      "name": "Daytona Beach International",
+      "latitude": 29.1799,
+      "longitude": -81.0581,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3000,
+      "city": {
+        "name": "Daytona Beach",
+        "latitude": 29.2108,
+        "longitude": -81.0228,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KSFB",
+      "name": "Orlando Sanford International",
+      "latitude": 28.7776,
+      "longitude": -81.2375,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3000,
+      "city": {
+        "name": "Sanford",
+        "latitude": 28.8029,
+        "longitude": -81.2731,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KPIE",
+      "name": "St. Pete-Clearwater International",
+      "latitude": 27.9102,
+      "longitude": -82.6874,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3000,
+      "city": {
+        "name": "Clearwater",
+        "latitude": 27.9659,
+        "longitude": -82.8001,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KSRQ",
+      "name": "Sarasota-Bradenton International",
+      "latitude": 27.3954,
+      "longitude": -82.5544,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3000,
+      "city": {
+        "name": "Sarasota",
+        "latitude": 27.3364,
+        "longitude": -82.5307,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KPGD",
+      "name": "Charlotte County Airport",
+      "latitude": 26.9202,
+      "longitude": -81.9905,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3000,
+      "city": {
+        "name": "Punta Gorda",
+        "latitude": 26.9298,
+        "longitude": -82.0454,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KAPF",
+      "name": "Naples Municipal Airport",
+      "latitude": 26.1526,
+      "longitude": -81.7753,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3000,
+      "city": {
+        "name": "Naples",
+        "latitude": 26.1420,
+        "longitude": -81.7948,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KFPR",
+      "name": "St. Lucie County International",
+      "latitude": 27.4951,
+      "longitude": -80.3683,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3000,
+      "city": {
+        "name": "Fort Pierce",
+        "latitude": 27.4467,
+        "longitude": -80.3256,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KMLB",
+      "name": "Melbourne Orlando International",
+      "latitude": 28.1028,
+      "longitude": -80.6453,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3000,
+      "city": {
+        "name": "Melbourne",
+        "latitude": 28.0836,
+        "longitude": -80.6081,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KVPS",
+      "name": "Eglin Air Force Base",
+      "latitude": 30.4833,
+      "longitude": -86.5254,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3000,
+      "city": {
+        "name": "Valparaiso",
+        "latitude": 30.5085,
+        "longitude": -86.4805,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KEYW",
+      "name": "Key West International",
+      "latitude": 24.5561,
+      "longitude": -81.7594,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3000,
+      "city": {
+        "name": "Key West",
+        "latitude": 24.5551,
+        "longitude": -81.7800,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KGSO",
+      "name": "Piedmont Triad International",
+      "latitude": 36.0978,
+      "longitude": -79.9373,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 4000,
+      "city": {
+        "name": "Greensboro",
+        "latitude": 36.0726,
+        "longitude": -79.7920,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KRDU",
+      "name": "Raleigh-Durham International",
+      "latitude": 35.8776,
+      "longitude": -78.7875,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 4000,
+      "city": {
+        "name": "Raleigh",
+        "latitude": 35.7796,
+        "longitude": -78.6382,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KILM",
+      "name": "Wilmington International",
+      "latitude": 34.2706,
+      "longitude": -77.9026,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3000,
+      "city": {
+        "name": "Wilmington",
+        "latitude": 34.2257,
+        "longitude": -77.9447,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KFAY",
+      "name": "Fayetteville Regional",
+      "latitude": 34.9912,
+      "longitude": -78.8803,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3000,
+      "city": {
+        "name": "Fayetteville",
+        "latitude": 35.0527,
+        "longitude": -78.8784,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KAVL",
+      "name": "Asheville Regional",
+      "latitude": 35.4362,
+      "longitude": -82.5418,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3000,
+      "city": {
+        "name": "Asheville",
+        "latitude": 35.5951,
+        "longitude": -82.5515,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KPOB",
+      "name": "Pope Field",
+      "latitude": 35.1709,
+      "longitude": -79.0145,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3000,
+      "city": {
+        "name": "Fort Bragg",
+        "latitude": 35.1389,
+        "longitude": -79.0064,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KEWN",
+      "name": "Coastal Carolina Regional",
+      "latitude": 35.0730,
+      "longitude": -77.0429,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3000,
+      "city": {
+        "name": "New Bern",
+        "latitude": 35.1085,
+        "longitude": -77.0441,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KCHS",
+      "name": "Charleston International / AFB",
+      "latitude": 32.8986,
+      "longitude": -80.0405,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 4000,
+      "city": {
+        "name": "Charleston",
+        "latitude": 32.7765,
+        "longitude": -79.9311,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KCAE",
+      "name": "Columbia Metropolitan",
+      "latitude": 33.9388,
+      "longitude": -81.1195,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 4000,
+      "city": {
+        "name": "Columbia",
+        "latitude": 34.0007,
+        "longitude": -81.0348,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KGSP",
+      "name": "Greenville-Spartanburg International",
+      "latitude": 34.8957,
+      "longitude": -82.2189,
+      "airspaceClass": "C",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 4000,
+      "city": {
+        "name": "Greenville",
+        "latitude": 34.8526,
+        "longitude": -82.3940,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KMYR",
+      "name": "Myrtle Beach International",
+      "latitude": 33.6797,
+      "longitude": -78.9283,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3000,
+      "city": {
+        "name": "Myrtle Beach",
+        "latitude": 33.6891,
+        "longitude": -78.8867,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KFLO",
+      "name": "Florence Regional",
+      "latitude": 34.1854,
+      "longitude": -79.7239,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3000,
+      "city": {
+        "name": "Florence",
+        "latitude": 34.1954,
+        "longitude": -79.7626,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KHXD",
+      "name": "Hilton Head Airport",
+      "latitude": 32.2244,
+      "longitude": -80.6975,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3000,
+      "city": {
+        "name": "Hilton Head Island",
+        "latitude": 32.2163,
+        "longitude": -80.7526,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KAGS",
+      "name": "Augusta Regional",
+      "latitude": 33.3699,
+      "longitude": -81.9645,
+      "airspaceClass": "D",
+      "airspaceFloor": 0,
+      "airspaceCeiling": 3000,
+      "city": {
+        "name": "Augusta",
+        "latitude": 33.4735,
+        "longitude": -81.9748,
+        "timeZoneId": "America/New_York"
+      }
+    }
+  ]
+}
+           
+
+
+  
+

@@ -1,0 +1,712 @@
+{
+  "airports": [
+    {
+      "icao": "KSUE",
+      "name": "Door County Cherryland Airport",
+      "latitude": 44.8436,
+      "longitude": -87.4215,
+      "city": {
+        "name": "Sturgeon Bay",
+        "latitude": 44.8342,
+        "longitude": -87.3771,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KGRB",
+      "name": "Green Bay Austin Straubel International",
+      "latitude": 44.4851,
+      "longitude": -88.1296,
+      "city": {
+        "name": "Green Bay",
+        "latitude": 44.5133,
+        "longitude": -88.0133,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KATW",
+      "name": "Appleton International Airport",
+      "latitude": 44.2581,
+      "longitude": -88.5191,
+      "city": {
+        "name": "Appleton",
+        "latitude": 44.2619,
+        "longitude": -88.4154,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KOSH",
+      "name": "Wittman Regional Airport",
+      "latitude": 43.9844,
+      "longitude": -88.5570,
+      "city": {
+        "name": "Oshkosh",
+        "latitude": 44.0247,
+        "longitude": -88.5426,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KFLD",
+      "name": "Fond du Lac County Airport",
+      "latitude": 43.7712,
+      "longitude": -88.4884,
+      "city": {
+        "name": "Fond du Lac",
+        "latitude": 43.7730,
+        "longitude": -88.4470,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KMTW",
+      "name": "Manitowoc County Airport",
+      "latitude": 44.1287,
+      "longitude": -87.6801,
+      "city": {
+        "name": "Manitowoc",
+        "latitude": 44.0886,
+        "longitude": -87.6579,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KSBM",
+      "name": "Sheboygan County Memorial Airport",
+      "latitude": 43.7696,
+      "longitude": -87.8514,
+      "city": {
+        "name": "Sheboygan",
+        "latitude": 43.7508,
+        "longitude": -87.7145,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KLAX",
+      "name": "Los Angeles International",
+      "latitude": 33.9425,
+      "longitude": -118.4081,
+      "city": {
+        "name": "Los Angeles",
+        "latitude": 34.0522,
+        "longitude": -118.2437,
+        "timeZoneId": "America/Los_Angeles"
+      }
+    },
+    {
+      "icao": "KSFO",
+      "name": "San Francisco International",
+      "latitude": 37.6188,
+      "longitude": -122.3750,
+      "city": {
+        "name": "San Francisco",
+        "latitude": 37.7749,
+        "longitude": -122.4194,
+        "timeZoneId": "America/Los_Angeles"
+      }
+    },
+    {
+      "icao": "KLAS",
+      "name": "Harry Reid International",
+      "latitude": 36.0840,
+      "longitude": -115.1537,
+      "city": {
+        "name": "Las Vegas",
+        "latitude": 36.1699,
+        "longitude": -115.1398,
+        "timeZoneId": "America/Los_Angeles"
+      }
+    },
+    {
+      "icao": "KDTW",
+      "name": "Detroit Metropolitan Wayne County Airport",
+      "latitude": 42.2162,
+      "longitude": -83.3554,
+      "city": {
+        "name": "Detroit",
+        "latitude": 42.3314,
+        "longitude": -83.0458,
+        "timeZoneId": "America/Detroit"
+      }
+    },
+    {
+      "icao": "KGRR",
+      "name": "Gerald R. Ford International Airport",
+      "latitude": 42.8808,
+      "longitude": -85.5228,
+      "city": {
+        "name": "Grand Rapids",
+        "latitude": 42.9634,
+        "longitude": -85.6681,
+        "timeZoneId": "America/Detroit"
+      }
+    },
+    {
+      "icao": "KMIA",
+      "name": "Miami International Airport",
+      "latitude": 25.7932,
+      "longitude": -80.2906,
+      "city": {
+        "name": "Miami",
+        "latitude": 25.7617,
+        "longitude": -80.1918,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KMCO",
+      "name": "Orlando International Airport",
+      "latitude": 28.4294,
+      "longitude": -81.3089,
+      "city": {
+        "name": "Orlando",
+        "latitude": 28.5383,
+        "longitude": -81.3792,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KTPA",
+      "name": "Tampa International Airport",
+      "latitude": 27.9755,
+      "longitude": -82.5332,
+      "city": {
+        "name": "Tampa",
+        "latitude": 27.9506,
+        "longitude": -82.4572,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KCAD",
+      "name": "Wexford County Airport",
+      "latitude": 44.2753,
+      "longitude": -85.4194,
+      "city": {
+        "name": "Cadillac",
+        "latitude": 44.2519,
+        "longitude": -85.4012,
+        "timeZoneId": "America/Detroit"
+      }
+    },
+    {
+      "icao": "KTVC",
+      "name": "Cherry Capital Airport",
+      "latitude": 44.7414,
+      "longitude": -85.5822,
+      "city": {
+        "name": "Traverse City",
+        "latitude": 44.7631,
+        "longitude": -85.6206,
+        "timeZoneId": "America/Detroit"
+      }
+    },
+    {
+      "icao": "KMKG",
+      "name": "Muskegon County Airport",
+      "latitude": 43.1695,
+      "longitude": -86.2382,
+      "city": {
+        "name": "Muskegon",
+        "latitude": 43.2342,
+        "longitude": -86.2484,
+        "timeZoneId": "America/Detroit"
+      }
+    },
+    {
+      "icao": "KLAN",
+      "name": "Capital Region International Airport",
+      "latitude": 42.7786,
+      "longitude": -84.5872,
+      "city": {
+        "name": "Lansing",
+        "latitude": 42.7325,
+        "longitude": -84.5555,
+        "timeZoneId": "America/Detroit"
+      }
+    },
+    {
+      "icao": "KDEN",
+      "name": "Denver International Airport",
+      "latitude": 39.8561,
+      "longitude": -104.6737,
+      "city": {
+        "name": "Denver",
+        "latitude": 39.7392,
+        "longitude": -104.9903,
+        "timeZoneId": "America/Denver"
+      }
+    },
+    {
+      "icao": "KGJT",
+      "name": "Grand Junction Regional Airport",
+      "latitude": 39.1224,
+      "longitude": -108.5267,
+      "city": {
+        "name": "Grand Junction",
+        "latitude": 39.0639,
+        "longitude": -108.5506,
+        "timeZoneId": "America/Denver"
+      }
+    },
+    {
+      "icao": "KSLC",
+      "name": "Salt Lake City International",
+      "latitude": 40.7884,
+      "longitude": -111.9778,
+      "city": {
+        "name": "Salt Lake City",
+        "latitude": 40.7608,
+        "longitude": -111.8910,
+        "timeZoneId": "America/Denver"
+      }
+    },
+    {
+      "icao": "KJFK",
+      "name": "John F. Kennedy International",
+      "latitude": 40.6413,
+      "longitude": -73.7781,
+      "city": {
+        "name": "New York",
+        "latitude": 40.7128,
+        "longitude": -74.0060,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KBOS",
+      "name": "Boston Logan International",
+      "latitude": 42.3656,
+      "longitude": -71.0096,
+      "city": {
+        "name": "Boston",
+        "latitude": 42.3601,
+        "longitude": -71.0589,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KATL",
+      "name": "Hartsfield-Jackson Atlanta International",
+      "latitude": 33.6367,
+      "longitude": -84.4281,
+      "city": {
+        "name": "Atlanta",
+        "latitude": 33.7490,
+        "longitude": -84.3880,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KBWI",
+      "name": "Baltimore/Washington International",
+      "latitude": 39.1754,
+      "longitude": -76.6682,
+      "city": {
+        "name": "Baltimore",
+        "latitude": 39.2904,
+        "longitude": -76.6122,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KCLT",
+      "name": "Charlotte Douglas International",
+      "latitude": 35.2140,
+      "longitude": -80.9431,
+      "city": {
+        "name": "Charlotte",
+        "latitude": 35.2271,
+        "longitude": -80.8431,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KCVG",
+      "name": "Cincinnati/Northern Kentucky International",
+      "latitude": 39.0488,
+      "longitude": -84.6678,
+      "city": {
+        "name": "Cincinnati",
+        "latitude": 39.1031,
+        "longitude": -84.5120,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KDCA",
+      "name": "Ronald Reagan Washington National",
+      "latitude": 38.8512,
+      "longitude": -77.0402,
+      "city": {
+        "name": "Washington DC",
+        "latitude": 38.9072,
+        "longitude": -77.0369,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KIAD",
+      "name": "Washington Dulles International",
+      "latitude": 38.9445,
+      "longitude": -77.4558,
+      "city": {
+        "name": "Washington DC",
+        "latitude": 38.9072,
+        "longitude": -77.0369,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KEWR",
+      "name": "Newark Liberty International",
+      "latitude": 40.6895,
+      "longitude": -74.1745,
+      "city": {
+        "name": "Newark",
+        "latitude": 40.7357,
+        "longitude": -74.1724,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KFLL",
+      "name": "Fort Lauderdale-Hollywood International",
+      "latitude": 26.0742,
+      "longitude": -80.1506,
+      "city": {
+        "name": "Fort Lauderdale",
+        "latitude": 26.1224,
+        "longitude": -80.1373,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KPBI",
+      "name": "Palm Beach International",
+      "latitude": 26.6832,
+      "longitude": -80.0956,
+      "city": {
+        "name": "West Palm Beach",
+        "latitude": 26.7153,
+        "longitude": -80.0534,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KPIT",
+      "name": "Pittsburgh International",
+      "latitude": 40.4915,
+      "longitude": -80.2329,
+      "city": {
+        "name": "Pittsburgh",
+        "latitude": 40.4406,
+        "longitude": -79.9959,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KRDU",
+      "name": "Raleigh-Durham International",
+      "latitude": 35.8776,
+      "longitude": -78.7875,
+      "city": {
+        "name": "Raleigh",
+        "latitude": 35.7796,
+        "longitude": -78.6382,
+        "timeZoneId": "America/New_York"
+      }
+    },
+    {
+      "icao": "KORD",
+      "name": "Chicago O'Hare International",
+      "latitude": 41.9786,
+      "longitude": -87.9048,
+      "city": {
+        "name": "Chicago",
+        "latitude": 41.8781,
+        "longitude": -87.6298,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KMDW",
+      "name": "Chicago Midway International",
+      "latitude": 41.7868,
+      "longitude": -87.7522,
+      "city": {
+        "name": "Chicago",
+        "latitude": 41.8781,
+        "longitude": -87.6298,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KDFW",
+      "name": "Dallas/Fort Worth International",
+      "latitude": 32.8968,
+      "longitude": -97.0380,
+      "city": {
+        "name": "Dallas",
+        "latitude": 32.7767,
+        "longitude": -96.7970,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KDAL",
+      "name": "Dallas Love Field",
+      "latitude": 32.8471,
+      "longitude": -96.8518,
+      "city": {
+        "name": "Dallas",
+        "latitude": 32.7767,
+        "longitude": -96.7970,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KHOU",
+      "name": "William P. Hobby Airport",
+      "latitude": 29.6454,
+      "longitude": -95.2789,
+      "city": {
+        "name": "Houston",
+        "latitude": 29.7604,
+        "longitude": -95.3698,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KIAH",
+      "name": "George Bush Intercontinental",
+      "latitude": 29.9902,
+      "longitude": -95.3368,
+      "city": {
+        "name": "Houston",
+        "latitude": 29.7604,
+        "longitude": -95.3698,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KMSP",
+      "name": "Minneapolis-Saint Paul International",
+      "latitude": 44.8848,
+      "longitude": -93.2223,
+      "city": {
+        "name": "Minneapolis",
+        "latitude": 44.9778,
+        "longitude": -93.2650,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KMSY",
+      "name": "Louis Armstrong New Orleans International",
+      "latitude": 29.9934,
+      "longitude": -90.2580,
+      "city": {
+        "name": "New Orleans",
+        "latitude": 29.9511,
+        "longitude": -90.0715,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KSTL",
+      "name": "St. Louis Lambert International",
+      "latitude": 38.7487,
+      "longitude": -90.3700,
+      "city": {
+        "name": "St. Louis",
+        "latitude": 38.6270,
+        "longitude": -90.1994,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KMCI",
+      "name": "Kansas City International",
+      "latitude": 39.2976,
+      "longitude": -94.7139,
+      "city": {
+        "name": "Kansas City",
+        "latitude": 39.0997,
+        "longitude": -94.5786,
+        "timeZoneId": "America/Chicago"
+      }
+    },
+    {
+      "icao": "KPHX",
+      "name": "Phoenix Sky Harbor International",
+      "latitude": 33.4342,
+      "longitude": -112.0117,
+      "city": {
+        "name": "Phoenix",
+        "latitude": 33.4484,
+        "longitude": -112.0740,
+        "timeZoneId": "America/Phoenix"
+      }
+    },
+    {
+      "icao": "KABQ",
+      "name": "Albuquerque International Sunport",
+      "latitude": 35.0402,
+      "longitude": -106.6091,
+      "city": {
+        "name": "Albuquerque",
+        "latitude": 35.0844,
+        "longitude": -106.6504,
+        "timeZoneId": "America/Denver"
+      }
+    },
+    {
+      "icao": "KBOI",
+      "name": "Boise Airport",
+      "latitude": 43.5644,
+      "longitude": -116.2228,
+      "city": {
+        "name": "Boise",
+        "latitude": 43.6150,
+        "longitude": -116.2023,
+        "timeZoneId": "America/Boise"
+      }
+    },
+    {
+      "icao": "KSEA",
+      "name": "Seattle-Tacoma International",
+      "latitude": 47.4502,
+      "longitude": -122.3088,
+      "city": {
+        "name": "Seattle",
+        "latitude": 47.6062,
+        "longitude": -122.3321,
+        "timeZoneId": "America/Los_Angeles"
+      }
+    },
+    {
+      "icao": "KPDX",
+      "name": "Portland International",
+      "latitude": 45.5898,
+      "longitude": -122.5951,
+      "city": {
+        "name": "Portland",
+        "latitude": 45.5155,
+        "longitude": -122.6789,
+        "timeZoneId": "America/Los_Angeles"
+      }
+    },
+    {
+      "icao": "KSAN",
+      "name": "San Diego International",
+      "latitude": 32.7336,
+      "longitude": -117.1897,
+      "city": {
+        "name": "San Diego",
+        "latitude": 32.7157,
+        "longitude": -117.1611,
+        "timeZoneId": "America/Los_Angeles"
+      }
+    },
+    {
+      "icao": "KOAK",
+      "name": "Oakland International",
+      "latitude": 37.7214,
+      "longitude": -122.2208,
+      "city": {
+        "name": "Oakland",
+        "latitude": 37.8044,
+        "longitude": -122.2712,
+        "timeZoneId": "America/Los_Angeles"
+      }
+    },
+    {
+      "icao": "KSAC",
+      "name": "Sacramento International",
+      "latitude": 38.6955,
+      "longitude": -121.5908,
+      "city": {
+        "name": "Sacramento",
+        "latitude": 38.5816,
+        "longitude": -121.4944,
+        "timeZoneId": "America/Los_Angeles"
+      }
+    },
+    {
+      "icao": "PANC",
+      "name": "Ted Stevens Anchorage International",
+      "latitude": 61.1743,
+      "longitude": -149.9962,
+      "city": {
+        "name": "Anchorage",
+        "latitude": 61.2181,
+        "longitude": -149.9003,
+        "timeZoneId": "America/Anchorage"
+      }
+    },
+    {
+      "icao": "PAFA",
+      "name": "Fairbanks International",
+      "latitude": 64.8151,
+      "longitude": -147.8560,
+      "city": {
+        "name": "Fairbanks",
+        "latitude": 64.8378,
+        "longitude": -147.7164,
+        "timeZoneId": "America/Anchorage"
+      }
+    },
+    {
+      "icao": "PAJN",
+      "name": "Juneau International",
+      "latitude": 58.3547,
+      "longitude": -134.5761,
+      "city": {
+        "name": "Juneau",
+        "latitude": 58.3019,
+        "longitude": -134.4197,
+        "timeZoneId": "America/Juneau"
+      }
+    },
+    {
+      "icao": "PHNL",
+      "name": "Daniel K. Inouye International",
+      "latitude": 21.3245,
+      "longitude": -157.9251,
+      "city": {
+        "name": "Honolulu",
+        "latitude": 21.3069,
+        "longitude": -157.8583,
+        "timeZoneId": "Pacific/Honolulu"
+      }
+    },
+    {
+      "icao": "PHOG",
+      "name": "Kahului Airport",
+      "latitude": 20.8986,
+      "longitude": -156.4305,
+      "city": {
+        "name": "Kahului",
+        "latitude": 20.8893,
+        "longitude": -156.4729,
+        "timeZoneId": "Pacific/Honolulu"
+      }
+    },
+    {
+      "icao": "PHKO",
+      "name": "Ellison Onizuka Kona International",
+      "latitude": 19.7388,
+      "longitude": -156.0456,
+      "city": {
+        "name": "Kailua-Kona",
+        "latitude": 19.6400,
+        "longitude": -155.9969,
+        "timeZoneId": "Pacific/Honolulu"
+      }
+    }
+  ]
+} 
