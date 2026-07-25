@@ -58,31 +58,77 @@
 
     .download:active { transform: scale(0.98); }
 
-    .hint {
+    .steps {
       margin-top: 1rem;
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: rgba(240, 245, 255, 0.88);
-      line-height: 1.4;
+      padding: 0.9rem 1rem;
+      border-radius: 0.85rem;
+      background: rgba(10, 26, 51, 0.72);
+      text-align: left;
+      font-size: 0.88rem;
+      line-height: 1.45;
+      color: rgba(240, 245, 255, 0.92);
     }
 
-    .hint-sub {
-      margin-top: 0.45rem;
-      font-size: 0.8rem;
-      font-weight: 400;
-      color: rgba(240, 245, 255, 0.55);
+    .steps strong { color: #fff; }
+
+    .steps ol {
+      margin: 0.4rem 0 0;
+      padding-left: 1.2rem;
     }
+
+    .steps li { margin: 0.35rem 0; }
+
+    .note {
+      margin-top: 0.75rem;
+      font-size: 0.78rem;
+      color: rgba(240, 245, 255, 0.55);
+      line-height: 1.35;
+    }
+
+    .after {
+      display: none;
+      margin-top: 1rem;
+      padding: 0.9rem 1rem;
+      border-radius: 0.85rem;
+      background: rgba(66, 133, 244, 0.22);
+      border: 1px solid rgba(66, 133, 244, 0.45);
+      font-size: 0.92rem;
+      font-weight: 600;
+      line-height: 1.4;
+      color: #fff;
+    }
+
+    .after.visible { display: block; }
   </style>
 </head>
 <body>
   <main>
     <a
+      id="downloadBtn"
       class="download"
       href="https://github.com/doorcountydrone/FlySafeWeatherApp/releases/latest/download/FlySafeWeather.apk"
-      download="FlySafeWeather.apk"
     >Download FlySafe Weather</a>
-    <p class="hint">After download, tap <strong>Open</strong> on the downloaded file to install.</p>
-    <p class="hint-sub">Allow install from this source if Android asks.</p>
+
+    <div id="afterDownload" class="after">
+      Download started. Pull down your notifications and tap
+      <strong>Open</strong> — or open <strong>Files → Downloads → FlySafeWeather.apk</strong>
+      to install.
+    </div>
+
+    <div class="steps">
+      <strong>Install steps</strong>
+      <ol>
+        <li>Tap the blue Download button above.</li>
+        <li>When the file finishes, tap <strong>Open</strong> (or open it from Downloads).</li>
+        <li>If Android asks, allow installs from this source, then tap <strong>Install</strong>.</li>
+      </ol>
+    </div>
+    <p class="note">Android does not install APKs by itself for safety — you must tap Open / Install once.</p>
   </main>
+  <script>
+    document.getElementById("downloadBtn").addEventListener("click", function () {
+      document.getElementById("afterDownload").classList.add("visible");
+    });
+  </script>
 </body>
 </html>
