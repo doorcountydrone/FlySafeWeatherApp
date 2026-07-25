@@ -3465,7 +3465,7 @@ private fun UpdatePromptDialog() {
         val update = withContext(Dispatchers.IO) {
             AppUpdateChecker.check(installedCode)
         } ?: return@LaunchedEffect
-        if (update.versionCode > updatePromptStore.dismissedVersionCode()) {
+        if (updatePromptStore.shouldPrompt(update.versionCode)) {
             availableUpdate = update
         }
     }
@@ -3474,7 +3474,7 @@ private fun UpdatePromptDialog() {
         AlertDialog(
             onDismissRequest = {
                 if (updateBusy) return@AlertDialog
-                updatePromptStore.dismiss(update.versionCode)
+                updatePromptStore.snooze(update.versionCode)
                 availableUpdate = null
                 updateError = null
             },
@@ -3537,7 +3537,7 @@ private fun UpdatePromptDialog() {
                 TextButton(
                     enabled = !updateBusy,
                     onClick = {
-                        updatePromptStore.dismiss(update.versionCode)
+                        updatePromptStore.snooze(update.versionCode)
                         availableUpdate = null
                         updateError = null
                     },
