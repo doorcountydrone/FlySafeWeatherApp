@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FlySafe Weather — Download</title>
+  <meta name="description" content="Download the FlySafe Weather Android app for drone and aviation weather." />
+  <meta property="og:title" content="FlySafe Weather" />
+  <meta property="og:description" content="Drone and aviation weather — tap to download the Android app." />
+  <meta property="og:image" content="flysafe_logo.png" />
+  <link rel="icon" href="flysafe_logo.png" />
+  <style>
+    :root {
+      --navy: #0a1a33;
+      --blue: #0b3d91;
+      --sky: #4285f4;
+      --foam: #f0f5ff;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      color: var(--foam);
+      background: var(--navy);
+    }
+
+    body {
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 1.25rem 1.25rem 2rem;
+      background:
+        linear-gradient(180deg, rgba(10, 26, 51, 0.15) 0%, rgba(10, 26, 51, 0.45) 50%, rgba(10, 26, 51, 0.88) 100%),
+        url("flysafe_background.jpg") center top / cover no-repeat;
+    }
+
+    main {
+      width: min(22rem, 100%);
+      text-align: center;
+    }
+
+    .download {
+      display: inline-block;
+      width: 100%;
+      padding: 0.95rem 1.25rem;
+      border-radius: 0.85rem;
+      background: linear-gradient(135deg, var(--sky), var(--blue));
+      color: var(--foam);
+      font-weight: 700;
+      font-size: 1.05rem;
+      text-decoration: none;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+    }
+
+    .download:active { transform: scale(0.98); }
+
+    .hint {
+      margin: 0.85rem 0 0;
+      font-size: 0.8rem;
+      color: rgba(240, 245, 255, 0.7);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <a
+      class="download"
+      href="https://github.com/doorcountydrone/FlySafeWeatherApp/releases/latest/download/FlySafeWeather.apk"
+    >Download FlySafe Weather</a>
+    <p class="hint">After download, open the file and allow install from this source if asked.</p>
+  </main>
+</body>
+</html>
