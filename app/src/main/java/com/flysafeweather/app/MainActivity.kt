@@ -54,6 +54,10 @@ import android.graphics.Canvas
 import android.graphics.Matrix
 import android.graphics.drawable.Drawable
 import com.flysafeweather.app.data.*
+import com.flysafeweather.app.data.update.AppUpdateChecker
+import com.flysafeweather.app.data.update.AppUpdateInstaller
+import com.flysafeweather.app.data.update.AvailableUpdate
+import com.flysafeweather.app.data.update.UpdatePromptStore
 import com.flysafeweather.app.ui.*
 import com.flysafeweather.app.ui.theme.DoorCountyDroneWeatherAppTheme
 import kotlinx.coroutines.Dispatchers
@@ -1114,6 +1118,12 @@ fun MainScreen(
     var showWeatherPage by rememberSaveable { mutableStateOf(false) }
     var showInstructions by remember { mutableStateOf(false) }
     var tfrRadiusNm by remember { mutableIntStateOf(TfrService.DEFAULT_TFR_RADIUS_NM) }
+    val context = LocalContext.current
+    val versionName = remember(context) {
+        runCatching {
+            context.packageManager.getPackageInfo(context.packageName, 0).versionName
+        }.getOrNull().orEmpty().ifBlank { "?" }
+    }
 
     val weatherData = remember { mutableStateOf<MetarData>(MetarData()) }
     val currentLocation = remember { mutableStateOf<Location?>(null) }
@@ -1385,6 +1395,14 @@ fun MainScreen(
                                         .verticalScroll(rememberScrollState())
                                         .padding(vertical = 8.dp)
                                 ) {
+                                    Text(
+                                        text = "Version $versionName",
+                                        style = MaterialTheme.typography.titleMedium,
+                                        color = MaterialTheme.colorScheme.primary,
+                                        fontWeight = FontWeight.SemiBold,
+                                    )
+                                    Spacer(modifier = Modifier.height(12.dp))
+
                                     InstructionSection(
                                         title = "Weather Information",
                                         content = """
@@ -1622,6 +1640,11 @@ fun WeatherPage(
     var show24HourForecast by remember { mutableStateOf(false) }
     val airports = remember { mutableStateOf<List<Airport>>(emptyList()) }
     val context = LocalContext.current
+    val versionName = remember(context) {
+        runCatching {
+            context.packageManager.getPackageInfo(context.packageName, 0).versionName
+        }.getOrNull().orEmpty().ifBlank { "?" }
+    }
     val scope = rememberCoroutineScope()
     var kpIndexData by remember { mutableStateOf<KpIndexData?>(null) }
     var kpIndexError by remember { mutableStateOf<String?>(null) }
@@ -1880,6 +1903,14 @@ fun WeatherPage(
                                                 .verticalScroll(rememberScrollState())
                                                 .padding(vertical = 8.dp)
                                         ) {
+                                            Text(
+                                                text = "Version $versionName",
+                                                style = MaterialTheme.typography.titleMedium,
+                                                color = MaterialTheme.colorScheme.primary,
+                                                fontWeight = FontWeight.SemiBold,
+                                            )
+                                            Spacer(modifier = Modifier.height(12.dp))
+
                                             InstructionSection(
                                                 title = "Weather Information",
                                                 content = """
@@ -3417,6 +3448,107 @@ class AircraftService {
     }
 }
 
+/** Checks GitHub for a newer release on app open and offers to download + install it. */
+@Composable
+private fun UpdatePromptDialog() {
+    val context = LocalContext.current
+    val scope = rememberCoroutineScope()
+    var availableUpdate by remember { mutableStateOf<AvailableUpdate?>(null) }
+    var updateBusy by remember { mutableStateOf(false) }
+    var updateError by remember { mutableStateOf<String?>(null) }
+    val updatePromptStore = remember { UpdatePromptStore(context) }
+
+    LaunchedEffect(Unit) {
+        val installedCode = runCatching {
+            context.packageManager.getPackageInfo(context.packageName, 0).longVersionCode.toInt()
+        }.getOrDefault(0)
+        val update = withContext(Dispatchers.IO) {
+            AppUpdateChecker.check(installedCode)
+        } ?: return@LaunchedEffect
+        if (update.versionCode > updatePromptStore.dismissedVersionCode()) {
+            availableUpdate = update
+        }
+    }
+
+    availableUpdate?.let { update ->
+        AlertDialog(
+            onDismissRequest = {
+                if (updateBusy) return@AlertDialog
+                updatePromptStore.dismiss(update.versionCode)
+                availableUpdate = null
+                updateError = null
+            },
+            title = { Text("New version available") },
+            text = {
+                Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Text(
+                        if (updateBusy) {
+                            "Downloading FlySafe Weather ${update.versionName}…"
+                        } else {
+                            "FlySafe Weather ${update.versionName} is ready. " +
+                                "Tap Update to download and open the installer."
+                        },
+                    )
+                    updateError?.let { err ->
+                        Text(err, color = MaterialTheme.colorScheme.error)
+                    }
+                    if (updateBusy) {
+                        CircularProgressIndicator(modifier = Modifier.size(28.dp))
+                    }
+                }
+            },
+            confirmButton = {
+                TextButton(
+                    enabled = !updateBusy,
+                    onClick = {
+                        updateError = null
+                        if (AppUpdateInstaller.needsInstallPermission(context)) {
+                            updateError =
+                                "Allow installs from FlySafe Weather in the next screen, then tap Update again."
+                            AppUpdateInstaller.openInstallPermissionSettings(context)
+                            return@TextButton
+                        }
+                        updateBusy = true
+                        scope.launch {
+                            val result = withContext(Dispatchers.IO) {
+                                AppUpdateInstaller.downloadAndInstall(context, update.apkUrl)
+                            }
+                            updateBusy = false
+                            when (result) {
+                                is AppUpdateInstaller.Result.LaunchedInstaller -> {
+                                    availableUpdate = null
+                                }
+                                is AppUpdateInstaller.Result.NeedsInstallPermission -> {
+                                    updateError =
+                                        "Allow installs from FlySafe Weather, then tap Update again."
+                                    AppUpdateInstaller.openInstallPermissionSettings(context)
+                                }
+                                is AppUpdateInstaller.Result.Failed -> {
+                                    updateError = result.message
+                                }
+                            }
+                        }
+                    },
+                ) {
+                    Text(if (updateBusy) "Downloading…" else "Update")
+                }
+            },
+            dismissButton = {
+                TextButton(
+                    enabled = !updateBusy,
+                    onClick = {
+                        updatePromptStore.dismiss(update.versionCode)
+                        availableUpdate = null
+                        updateError = null
+                    },
+                ) {
+                    Text("Not now")
+                }
+            },
+        )
+    }
+}
+
 class MainActivity : ComponentActivity() {
     private lateinit var locationService: LocationService
     private lateinit var metarService: MetarService
@@ -3510,6 +3642,8 @@ class MainActivity : ComponentActivity() {
                             )
                         }
                     }
+
+                    UpdatePromptDialog()
                 }
             }
         }

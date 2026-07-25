@@ -7,6 +7,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.compose.material.icons.Icons
@@ -23,6 +24,11 @@ fun LegalScreen(
 ) {
     var selectedTab by remember { mutableStateOf(0) }
     val context = LocalContext.current
+    val versionName = remember(context) {
+        runCatching {
+            context.packageManager.getPackageInfo(context.packageName, 0).versionName
+        }.getOrNull().orEmpty().ifBlank { "?" }
+    }
 
     Surface(
         modifier = Modifier.fillMaxSize(),
@@ -50,6 +56,14 @@ fun LegalScreen(
                     .fillMaxSize()
                     .padding(top = 8.dp)
             ) {
+                Text(
+                    text = "Version $versionName",
+                    style = MaterialTheme.typography.titleMedium,
+                    color = MaterialTheme.colorScheme.primary,
+                    fontWeight = FontWeight.SemiBold,
+                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp),
+                )
+
                 ScrollableTabRow(
                     selectedTabIndex = selectedTab,
                     edgePadding = 0.dp
