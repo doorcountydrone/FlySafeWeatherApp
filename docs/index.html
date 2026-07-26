@@ -48,14 +48,12 @@
       display: inline-block;
       width: 100%;
       padding: 0.95rem 1.25rem;
-      border: none;
       border-radius: 0.85rem;
       background: linear-gradient(135deg, var(--sky), var(--blue));
       color: var(--foam);
       font: 700 1.05rem/1.2 "Segoe UI", system-ui, sans-serif;
       text-decoration: none;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
-      cursor: pointer;
     }
 
     .download:active { transform: scale(0.98); }
@@ -70,32 +68,12 @@
 </head>
 <body>
   <main>
-    <button id="downloadBtn" class="download" type="button">Download FlySafe Weather</button>
+    <!-- Plain link = Chrome's normal download + Open snackbar (most reliable on Chrome) -->
+    <a class="download" href="FlySafeWeather.apk">Download FlySafe Weather</a>
     <p class="hint">
-      Starts the download and opens Downloads — tap <strong>FlySafeWeather.apk</strong> to install.
+      When the download finishes, tap <strong>Open</strong> at the bottom of Chrome
+      (or Chrome menu → Downloads → FlySafeWeather.apk).
     </p>
   </main>
-  <script>
-    // Must run inside the same tap handler (no setTimeout) or Android blocks it.
-    var DOWNLOADS_INTENT =
-      "intent:#Intent;action=android.intent.action.VIEW_DOWNLOADS;" +
-      "S.browser_fallback_url=https://doorcountydrone.github.io/FlySafeWeatherApp/;" +
-      "end";
-
-    function startApkDownload() {
-      var link = document.createElement("a");
-      link.href = "FlySafeWeather.apk";
-      link.setAttribute("download", "FlySafeWeather.apk");
-      document.body.appendChild(link);
-      link.click();
-      link.remove();
-    }
-
-    document.getElementById("downloadBtn").addEventListener("click", function () {
-      startApkDownload();
-      // Same tap — required for Android to allow opening Downloads
-      window.location.href = DOWNLOADS_INTENT;
-    });
-  </script>
 </body>
 </html>
