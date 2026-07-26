@@ -35,7 +35,7 @@
       align-items: center;
       padding: 1.25rem 1.25rem 2rem;
       background:
-        linear-gradient(180deg, rgba(10, 26, 51, 0.05) 0%, rgba(10, 26, 51, 0.35) 55%, rgba(10, 26, 51, 0.9) 100%),
+        linear-gradient(180deg, rgba(10, 26, 51, 0.05) 0%, rgba(10, 26, 51, 0.15) 55%, rgba(10, 26, 51, 0.88) 100%),
         url("flysafe_weather_splash.png") center top / cover no-repeat;
     }
 
@@ -44,54 +44,35 @@
       text-align: center;
     }
 
-    .btn {
-      display: block;
+    .download {
+      display: inline-block;
       width: 100%;
       padding: 0.95rem 1.25rem;
       border-radius: 0.85rem;
-      font: 700 1.05rem/1.2 "Segoe UI", system-ui, sans-serif;
-      text-decoration: none;
-      box-sizing: border-box;
-    }
-
-    .btn-primary {
       background: linear-gradient(135deg, var(--sky), var(--blue));
       color: var(--foam);
+      font-weight: 700;
+      font-size: 1.05rem;
+      text-decoration: none;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
     }
 
-    .btn-secondary {
-      margin-top: 0.65rem;
-      background: rgba(240, 245, 255, 0.14);
-      color: var(--foam);
-      border: 1px solid rgba(240, 245, 255, 0.3);
-    }
-
-    .btn:active { transform: scale(0.98); }
+    .download:active { transform: scale(0.98); }
 
     .hint {
       margin: 0.85rem 0 0;
       font-size: 0.8rem;
       color: rgba(240, 245, 255, 0.7);
-      line-height: 1.4;
     }
   </style>
 </head>
 <body>
   <main>
-    <a class="btn btn-primary" href="FlySafeWeather.apk">1. Download FlySafe Weather</a>
-
-    <!-- Separate tap required — Chrome blocks opening Downloads without a direct user tap -->
     <a
-      class="btn btn-secondary"
-      href="intent://com.android.externalstorage.documents/document/primary%3ADownload#Intent;scheme=content;action=android.intent.action.VIEW;category=android.intent.category.DEFAULT;end"
-    >2. Open Downloads folder</a>
-
-    <p class="hint">
-      Chrome won’t open Downloads by itself. After the download finishes, tap button 2,
-      then tap <strong>FlySafeWeather.apk</strong> → Install.<br /><br />
-      Or in Chrome: <strong>⋮ menu → Downloads</strong>
-    </p>
+      class="download"
+      href="FlySafeWeather.apk"
+    >Download FlySafe Weather</a>
+    <p class="hint">After download, open the file and allow install from this source if asked.</p>
   </main>
 </body>
 </html>
