@@ -66,35 +66,35 @@
       color: rgba(240, 245, 255, 0.7);
       line-height: 1.4;
     }
-
-    .hint a {
-      color: rgba(240, 245, 255, 0.95);
-      font-weight: 600;
-    }
   </style>
 </head>
 <body>
   <main>
     <button id="downloadBtn" class="download" type="button">Download FlySafe Weather</button>
     <p class="hint">
-      Opens your Downloads folder next — tap <strong>FlySafeWeather.apk</strong> to install.
-      <a id="openDownloads" href="intent:#Intent;action=android.intent.action.VIEW_DOWNLOADS;end">Open Downloads</a>
+      Starts the download and opens Downloads — tap <strong>FlySafeWeather.apk</strong> to install.
     </p>
   </main>
   <script>
-    var APK_URL = "FlySafeWeather.apk";
-    var DOWNLOADS_INTENT = "intent:#Intent;action=android.intent.action.VIEW_DOWNLOADS;end";
+    // Must run inside the same tap handler (no setTimeout) or Android blocks it.
+    var DOWNLOADS_INTENT =
+      "intent:#Intent;action=android.intent.action.VIEW_DOWNLOADS;" +
+      "S.browser_fallback_url=https://doorcountydrone.github.io/FlySafeWeatherApp/;" +
+      "end";
 
-    document.getElementById("downloadBtn").addEventListener("click", function () {
+    function startApkDownload() {
       var link = document.createElement("a");
-      link.href = APK_URL;
+      link.href = "FlySafeWeather.apk";
       link.setAttribute("download", "FlySafeWeather.apk");
       document.body.appendChild(link);
       link.click();
       link.remove();
-      setTimeout(function () {
-        window.location.href = DOWNLOADS_INTENT;
-      }, 1200);
+    }
+
+    document.getElementById("downloadBtn").addEventListener("click", function () {
+      startApkDownload();
+      // Same tap — required for Android to allow opening Downloads
+      window.location.href = DOWNLOADS_INTENT;
     });
   </script>
 </body>
