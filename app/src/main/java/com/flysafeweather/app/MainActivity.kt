@@ -12,6 +12,10 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.EnterTransition
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.background
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.*
@@ -86,6 +90,9 @@ import com.flysafeweather.app.ui.TFRMonitor
 private fun Throwable.isComposeCancellation(): Boolean =
     this is CancellationException ||
         message?.contains("left the composition", ignoreCase = true) == true
+
+private const val SPLASH_HOLD_MS = 2_000L
+private const val SPLASH_FADE_MS = 500
 
 private val SafeGreen = Color(0xFF4CAF50)  // Material Design Green 500
 private val MarginalOrange = Color(0xFFFF9800)  // Material Design Orange 500
@@ -3566,19 +3573,16 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        
-        var keepSplashScreen = true
-        
-        // Install splash screen and keep it visible for at least 2 seconds
-        installSplashScreen().setKeepOnScreenCondition {
-            // Delay splash screen dismissal
-            if (keepSplashScreen) {
-                lifecycleScope.launch {
-                    delay(1500) // 1.5 seconds delay
-                    keepSplashScreen = false
-                }
-            }
-            keepSplashScreen
+
+        var keepSystemSplash = true
+        val splashScreen = installSplashScreen()
+        splashScreen.setKeepOnScreenCondition { keepSystemSplash }
+        splashScreen.setOnExitAnimationListener { provider ->
+            provider.view.animate()
+                .alpha(0f)
+                .setDuration(280L)
+                .withEndAction { provider.remove() }
+                .start()
         }
         
         // Initialize all services
@@ -3603,6 +3607,14 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             val isOnline by networkConnectivity.isNetworkAvailable.collectAsState(initial = true)
+            var showSplash by remember { mutableStateOf(true) }
+
+            LaunchedEffect(Unit) {
+                // Hand off from the system splash to the full-screen splash artwork.
+                keepSystemSplash = false
+                delay(SPLASH_HOLD_MS)
+                showSplash = false
+            }
 
             DoorCountyDroneWeatherAppTheme {
                 Box(modifier = Modifier.fillMaxSize()) {
@@ -3643,7 +3655,17 @@ class MainActivity : ComponentActivity() {
                         }
                     }
 
-                    UpdatePromptDialog()
+                    AnimatedVisibility(
+                        visible = showSplash,
+                        enter = EnterTransition.None,
+                        exit = fadeOut(animationSpec = tween(SPLASH_FADE_MS)),
+                    ) {
+                        SplashScreen()
+                    }
+
+                    if (!showSplash) {
+                        UpdatePromptDialog()
+                    }
                 }
             }
         }
