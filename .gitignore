@@ -27,6 +27,5 @@ keystore.properties
 
 # Build artifacts — APKs are published through GitHub Releases
 *.apk
-!docs/FlySafeWeather.apk
 app/release/
 app/debug/
