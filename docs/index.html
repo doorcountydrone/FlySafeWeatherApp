@@ -52,6 +52,8 @@
       font-size: 1.05rem;
       text-decoration: none;
       box-sizing: border-box;
+      border: none;
+      cursor: pointer;
     }
 
     .btn-primary {
@@ -89,15 +91,7 @@
 
     .panel li { margin: 0.4rem 0; }
 
-    .warn {
-      margin-top: 0.75rem;
-      font-size: 0.8rem;
-      color: #ffd666;
-      font-weight: 600;
-      line-height: 1.35;
-    }
-
-    .after {
+    .status {
       display: none;
       margin-top: 1rem;
       padding: 0.95rem 1rem;
@@ -110,44 +104,78 @@
       color: #fff;
     }
 
-    .after.visible { display: block; }
+    .status.visible { display: block; }
+
+    .warn {
+      margin-top: 0.75rem;
+      font-size: 0.8rem;
+      color: #ffd666;
+      font-weight: 600;
+      line-height: 1.35;
+    }
   </style>
 </head>
 <body>
   <main>
-    <!-- Same-origin APK on GitHub Pages — Chrome is more likely to offer Open -->
-    <a id="downloadBtn" class="btn btn-primary" href="FlySafeWeather.apk">
-      1. Download FlySafe Weather
-    </a>
+    <button id="downloadBtn" class="btn btn-primary" type="button">
+      Download FlySafe Weather
+    </button>
 
     <a
       id="openDownloads"
       class="btn btn-secondary"
       href="intent:#Intent;action=android.intent.action.VIEW_DOWNLOADS;end"
     >
-      2. Open Downloads / Install
+      Open Downloads folder
     </a>
 
-    <div id="afterDownload" class="after">
-      File is downloading (~60 MB). When it finishes, tap button 2 above
-      — or swipe down notifications and tap the file — then tap Install.
+    <div id="status" class="status">
+      Download started. Opening your Downloads folder…
+      When the file finishes (~60 MB), tap <strong>FlySafeWeather.apk</strong> → Install.
     </div>
 
     <div class="panel">
-      <strong>Android will not install by itself</strong>
+      <strong>What happens</strong>
       <ol>
-        <li>Tap <strong>1. Download</strong> and wait until it finishes.</li>
-        <li>Tap <strong>2. Open Downloads / Install</strong>.</li>
-        <li>Tap <strong>FlySafeWeather.apk</strong>, then <strong>Install</strong>.</li>
-        <li>If asked, allow installs from Chrome / your browser first.</li>
+        <li>Tap Download — the APK starts downloading.</li>
+        <li>This page opens your <strong>Downloads</strong> folder automatically.</li>
+        <li>When it finishes, tap <strong>FlySafeWeather.apk</strong>, then <strong>Install</strong>.</li>
       </ol>
     </div>
-    <p class="warn">If nothing opens: Files app → Downloads → FlySafeWeather.apk → Install.</p>
+    <p class="warn">If Downloads doesn’t open, use the “Open Downloads folder” button above.</p>
   </main>
   <script>
-    document.getElementById("downloadBtn").addEventListener("click", function () {
-      document.getElementById("afterDownload").classList.add("visible");
-    });
+    var APK_URL = "FlySafeWeather.apk";
+    var DOWNLOADS_INTENT = "intent:#Intent;action=android.intent.action.VIEW_DOWNLOADS;end";
+
+    function openDownloadsFolder() {
+      // Primary: system Downloads UI
+      window.location.href = DOWNLOADS_INTENT;
+      // Fallback for some Chrome / Files UIs a moment later if still on this page
+      setTimeout(function () {
+        var fallback = document.createElement("a");
+        fallback.href = "intent://com.android.chrome/downloads#Intent;scheme=chrome-native;package=com.android.chrome;end";
+        fallback.click();
+      }, 800);
+    }
+
+    function startDownloadThenOpenDownloads() {
+      var status = document.getElementById("status");
+      status.classList.add("visible");
+
+      // Trigger APK download without navigating away from this page first
+      var link = document.createElement("a");
+      link.href = APK_URL;
+      link.setAttribute("download", "FlySafeWeather.apk");
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+
+      // Give the download a moment to start, then jump to Downloads
+      setTimeout(openDownloadsFolder, 1200);
+    }
+
+    document.getElementById("downloadBtn").addEventListener("click", startDownloadThenOpenDownloads);
   </script>
 </body>
 </html>
