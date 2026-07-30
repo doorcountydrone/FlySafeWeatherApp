@@ -1,6 +1,6 @@
 # FlySafe Weather
 
-Android weather app for drone pilots and aviators: METAR and TAF decoding, NWS forecasts,
+Android weather app for drone pilots and aviators: METAR decoding, NWS forecasts,
 TFR and controlled airspace awareness, GNSS satellite status, Kp index, and sunrise/sunset planning.
 
 ## Download
@@ -23,5 +23,5 @@ API keys are not committed. To build:
 
 ## Data sources
 
-Aviation weather (METAR/TAF), NWS forecasts, FAA TFR/NOTAM data, and space weather indices.
+Aviation weather (METAR), NWS forecasts, FAA TFR/NOTAM data, and space weather indices.
 For situational awareness only — not for navigation.

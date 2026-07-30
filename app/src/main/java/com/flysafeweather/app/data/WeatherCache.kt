@@ -15,7 +15,6 @@ import java.time.temporal.ChronoUnit
 private val Context.weatherCache: DataStore<Preferences> by preferencesDataStore(name = "weather_cache")
 
 class WeatherCache(private val context: Context) {
-    private val prefs: android.content.SharedPreferences = context.getSharedPreferences("weather_cache", Context.MODE_PRIVATE)
     private val gson: Gson = GsonBuilder()
         .registerTypeAdapter(LocalDateTime::class.java, LocalDateTimeAdapter())
         .create()
@@ -47,10 +46,6 @@ class WeatherCache(private val context: Context) {
             preferences[KP_INDEX_DATA] = gson.toJson(data)
             preferences[LAST_UPDATE] = Instant.now().toEpochMilli()
         }
-    }
-
-    suspend fun cacheTafData(tafData: TafData) {
-        prefs.edit().putString("taf_data", gson.toJson(tafData)).apply()
     }
 
     suspend fun getCachedMetarData(): MetarData? {
@@ -93,17 +88,6 @@ class WeatherCache(private val context: Context) {
         } catch (e: Exception) {
             null
         }
-    }
-
-    fun getCachedTafData(): TafData? {
-        val json = prefs.getString("taf_data", null)
-        return if (json != null) {
-            try {
-                gson.fromJson(json, TafData::class.java)
-            } catch (e: Exception) {
-                null
-            }
-        } else null
     }
 
     private fun isCacheValid(lastUpdate: Long): Boolean {

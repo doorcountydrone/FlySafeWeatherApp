@@ -57,7 +57,7 @@ class TfrService(
 
     companion object {
         const val DEFAULT_TFR_RADIUS_NM = 30
-        val TFR_RADIUS_OPTIONS_NM = listOf(5, 15, 30, 50)
+        val TFR_RADIUS_OPTIONS_NM = listOf(5, 15, 30, 50, 75, 100)
 
         fun isVipNationwideTfr(tfr: TfrData): Boolean =
             tfr.type == TfrType.VIP_PRESIDENTIAL ||

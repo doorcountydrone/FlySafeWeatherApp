@@ -211,6 +211,7 @@ private fun WeatherInfoCard(
 @Composable
 fun TfrMapView(
     currentLocation: Location?,
+    searchCenter: LatLng?,
     tfrs: List<TfrData>,
     tfrService: TfrService,
     searchRadiusNm: Int = TfrService.DEFAULT_TFR_RADIUS_NM,
@@ -224,7 +225,7 @@ fun TfrMapView(
     val defaultLocation = LatLng(44.8436, -87.4215) // KSUE coordinates
     val cameraPositionState = rememberCameraPositionState {
         position = CameraPosition.fromLatLngZoom(
-            currentLocation?.let { LatLng(it.latitude, it.longitude) } ?: defaultLocation,
+            searchCenter ?: currentLocation?.let { LatLng(it.latitude, it.longitude) } ?: defaultLocation,
             10f
         )
     }
@@ -250,23 +251,24 @@ fun TfrMapView(
         }
     }
 
-    // Fit map to local TFRs + user location (nationwide VIP TFRs stay on map but don't zoom the view away)
-    LaunchedEffect(tfrs, currentLocation, searchRadiusNm) {
+    // Fit map to local TFRs + the active search point (GPS or manual airport).
+    // Nationwide VIP TFRs stay on the map but do not zoom the view away.
+    LaunchedEffect(tfrs, searchCenter, currentLocation, searchRadiusNm) {
         val validTfrs = tfrs.filter { tfr ->
             val c = tfr.coordinates
             c.size >= 3 && !(c.isNotEmpty() && c.all { kotlin.math.abs(it.latitude) <= 2.0 && kotlin.math.abs(it.longitude) <= 2.0 })
         }
-        val loc = currentLocation
-        val localTfrs = if (loc != null) {
+        val center = searchCenter ?: currentLocation?.let { LatLng(it.latitude, it.longitude) }
+        val localTfrs = if (center != null) {
             validTfrs.filter { tfr ->
-                tfrService.isWithinRadius(tfr, loc.latitude, loc.longitude, searchRadiusNm.toDouble())
+                tfrService.isWithinRadius(tfr, center.latitude, center.longitude, searchRadiusNm.toDouble())
             }
         } else {
             validTfrs
         }
         delay(400)
         if (localTfrs.isEmpty()) {
-            loc?.let {
+            center?.let {
                 try {
                     cameraPositionState.move(
                         CameraUpdateFactory.newLatLngZoom(LatLng(it.latitude, it.longitude), 10f)
@@ -278,7 +280,7 @@ fun TfrMapView(
             return@LaunchedEffect
         }
         val builder = LatLngBounds.builder()
-        loc?.let { builder.include(LatLng(it.latitude, it.longitude)) }
+        center?.let { builder.include(it) }
         localTfrs.forEach { tfr -> tfr.coordinates.forEach { builder.include(it) } }
         try {
             cameraPositionState.move(CameraUpdateFactory.newLatLngBounds(builder.build(), 120))
@@ -395,17 +397,17 @@ fun TfrMapView(
         }
 
         if (!isLoading) {
-            val loc = currentLocation
-            val nearbyCount = if (loc != null) {
+            val center = searchCenter ?: currentLocation?.let { LatLng(it.latitude, it.longitude) }
+            val nearbyCount = if (center != null) {
                 tfrs.count { tfr ->
-                    tfrService.isWithinRadius(tfr, loc.latitude, loc.longitude, searchRadiusNm.toDouble())
+                    tfrService.isWithinRadius(tfr, center.latitude, center.longitude, searchRadiusNm.toDouble())
                 }
             } else {
                 tfrs.size
             }
             val vipNationwideCount = tfrs.count { tfr ->
-                TfrService.isVipNationwideTfr(tfr) && (loc == null || !tfrService.isWithinRadius(
-                    tfr, loc.latitude, loc.longitude, searchRadiusNm.toDouble()
+                TfrService.isVipNationwideTfr(tfr) && (center == null || !tfrService.isWithinRadius(
+                    tfr, center.latitude, center.longitude, searchRadiusNm.toDouble()
                 ))
             }
             val summaryText = when {
@@ -1094,7 +1096,6 @@ fun MainScreen(
     locationService: LocationService,
     airportService: AirportService,
     tfrService: TfrService,
-    tafService: TafService,
     preferencesManager: PreferencesManager,
     kpIndexService: KpIndexService,
     gnssService: GnssService,
@@ -1261,7 +1262,6 @@ fun MainScreen(
                 airportService = airportService,
                 locationService = locationService,
                 tfrService = tfrService,
-                tafService = tafService,
                 isDarkTheme = isDarkTheme,
                 onThemeChange = { newTheme ->
                     isDarkTheme = newTheme
@@ -1449,7 +1449,8 @@ fun MainScreen(
                                             • Red polygons indicate restricted areas
                                             • Tap a TFR to view details
                                             • Loading can take up to 1 minute
-                                            • Shows TFRs within your chosen radius (5–50 nm) of your location
+                                            • Shows TFRs within your chosen radius (5–100 nm) of your location
+                                            • In Manual Mode, local TFRs are centered on the selected airport
                                             • Also shows all VIP/SECURITY TFRs across the US
                                             • International TFR data not currently available
                                         """.trimIndent()
@@ -1604,7 +1605,6 @@ fun WeatherPage(
     airportService: AirportService,
     locationService: LocationService,
     tfrService: TfrService,
-    tafService: TafService,
     isDarkTheme: Boolean,
     onThemeChange: (Boolean) -> Unit,
     isLoading: MutableState<Boolean>,
@@ -1701,13 +1701,32 @@ fun WeatherPage(
         }
     }
 
-    // Fetch TFRs near current location (or airport when GPS is unavailable)
-    LaunchedEffect(currentLocation.value, nearestAirport.value, tfrRadiusNm) {
-        val lat = currentLocation.value?.latitude ?: nearestAirport.value?.latitude
-        val lon = currentLocation.value?.longitude ?: nearestAirport.value?.longitude
-        if (lat == null || lon == null) return@LaunchedEffect
+    // Manual mode searches around the selected airport. Automatic mode searches
+    // around GPS, falling back to the active airport while a GPS fix is unavailable.
+    val tfrSearchCenter = when {
+        isManualMode && nearestAirport.value != null -> {
+            val airport = nearestAirport.value!!
+            LatLng(airport.latitude, airport.longitude)
+        }
+        currentLocation.value != null -> {
+            val location = currentLocation.value!!
+            LatLng(location.latitude, location.longitude)
+        }
+        nearestAirport.value != null -> {
+            val airport = nearestAirport.value!!
+            LatLng(airport.latitude, airport.longitude)
+        }
+        else -> null
+    }
+
+    LaunchedEffect(tfrSearchCenter, tfrRadiusNm) {
+        val center = tfrSearchCenter ?: return@LaunchedEffect
         try {
-            tfrs = tfrService.fetchTfrs(lat = lat, lon = lon, radiusNm = tfrRadiusNm)
+            tfrs = tfrService.fetchTfrs(
+                lat = center.latitude,
+                lon = center.longitude,
+                radiusNm = tfrRadiusNm
+            )
         } catch (e: Exception) {
             if (e.isComposeCancellation()) throw e
             Log.e("WeatherPage", "Error fetching TFRs", e)
@@ -1772,6 +1791,7 @@ fun WeatherPage(
         if (showMap) {
             TfrMapView(
                 currentLocation = currentLocation.value,
+                searchCenter = tfrSearchCenter,
                 tfrs = tfrs,
                 tfrService = tfrService,
                 searchRadiusNm = tfrRadiusNm,
@@ -1958,7 +1978,8 @@ fun WeatherPage(
                                                     • Red polygons indicate restricted areas
                                                     • Tap a TFR to view details
                                                     • Loading can take up to 1 minute
-                                                    • Shows TFRs within your chosen radius (5–50 nm) of your location
+                                                    • Shows TFRs within your chosen radius (5–100 nm) of your location
+                                                    • In Manual Mode, local TFRs are centered on the selected airport
                                                     • Also shows all VIP/SECURITY TFRs across the US
                                                     • International TFR data not currently available
                                                 """.trimIndent()
@@ -2561,25 +2582,32 @@ fun WeatherPage(
                                         color = MaterialTheme.colorScheme.onSurface
                                     )
                                     Spacer(modifier = Modifier.height(8.dp))
-                                    Row(
-                                        modifier = Modifier.fillMaxWidth(),
-                                        horizontalArrangement = Arrangement.spacedBy(8.dp)
-                                    ) {
-                                        TfrService.TFR_RADIUS_OPTIONS_NM.forEach { option ->
-                                            FilterChip(
-                                                selected = tfrRadiusNm == option,
-                                                onClick = {
-                                                    tfrRadiusNm = option
-                                                    tfrRadiusToSave = option
-                                                },
-                                                label = { Text("${option} nm") },
-                                                modifier = Modifier.weight(1f)
-                                            )
+                                    TfrService.TFR_RADIUS_OPTIONS_NM.chunked(3).forEach { rowOptions ->
+                                        Row(
+                                            modifier = Modifier.fillMaxWidth(),
+                                            horizontalArrangement = Arrangement.spacedBy(8.dp)
+                                        ) {
+                                            rowOptions.forEach { option ->
+                                                FilterChip(
+                                                    selected = tfrRadiusNm == option,
+                                                    onClick = {
+                                                        tfrRadiusNm = option
+                                                        tfrRadiusToSave = option
+                                                    },
+                                                    label = { Text("${option} nm") },
+                                                    modifier = Modifier.weight(1f)
+                                                )
+                                            }
+                                            // Keep row alignment when a chunk has fewer than 3 chips
+                                            repeat(3 - rowOptions.size) {
+                                                Spacer(modifier = Modifier.weight(1f))
+                                            }
                                         }
+                                        Spacer(modifier = Modifier.height(8.dp))
                                     }
                                     if (tfrs.isNotEmpty()) {
-                                        val lat = currentLocation.value?.latitude ?: nearestAirport.value?.latitude
-                                        val lon = currentLocation.value?.longitude ?: nearestAirport.value?.longitude
+                                        val lat = tfrSearchCenter?.latitude
+                                        val lon = tfrSearchCenter?.longitude
                                         val nearbyCount = if (lat != null && lon != null) {
                                             tfrs.count { tfr ->
                                                 tfrService.isWithinRadius(tfr, lat, lon, tfrRadiusNm.toDouble())
@@ -3561,7 +3589,6 @@ class MainActivity : ComponentActivity() {
     private lateinit var metarService: MetarService
     private lateinit var airportService: AirportService
     private lateinit var tfrService: TfrService
-    private lateinit var tafService: TafService
     private lateinit var aircraftService: AircraftService
     private lateinit var preferencesManager: PreferencesManager
     private lateinit var kpIndexService: KpIndexService
@@ -3595,7 +3622,6 @@ class MainActivity : ComponentActivity() {
             clientId = BuildConfig.FAA_CLIENT_ID,
             clientSecret = BuildConfig.FAA_CLIENT_SECRET
         )
-        tafService = TafService(this)
         preferencesManager = PreferencesManager(this)
         kpIndexService = KpIndexService(this)
         gnssService = GnssService(this)
@@ -3644,7 +3670,6 @@ class MainActivity : ComponentActivity() {
                                 locationService = locationService,
                                 airportService = airportService,
                                 tfrService = tfrService,
-                                tafService = tafService,
                                 preferencesManager = preferencesManager,
                                 kpIndexService = kpIndexService,
                                 gnssService = gnssService,

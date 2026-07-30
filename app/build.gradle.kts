@@ -41,8 +41,8 @@ android {
         applicationId = "com.flysafeweather.app"
         minSdk = 29
         targetSdk = 34
-        versionCode = 28
-        versionName = "26.2"
+        versionCode = 29
+        versionName = "26.3"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         
