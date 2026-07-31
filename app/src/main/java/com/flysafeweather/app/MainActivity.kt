@@ -1449,9 +1449,11 @@ fun MainScreen(
                                             • Red polygons indicate restricted areas
                                             • Tap a TFR to view details
                                             • Loading can take up to 1 minute
-                                            • Shows TFRs within your chosen radius (5–100 nm) of your location
-                                            • In Manual Mode, local TFRs are centered on the selected airport
-                                            • Also shows all VIP/SECURITY TFRs across the US
+                                            • Choose your search radius: 5, 15, 30, 50, 75, or 100 nm
+                                            • The "within X nm" count reflects your selected radius
+                                            • In Manual Mode, TFRs are searched and counted around the selected airport
+                                            • In default mode, TFRs are searched around your GPS location
+                                            • Also shows all VIP/SECURITY TFRs across the US, regardless of radius
                                             • International TFR data not currently available
                                         """.trimIndent()
                                     )
@@ -1978,9 +1980,11 @@ fun WeatherPage(
                                                     • Red polygons indicate restricted areas
                                                     • Tap a TFR to view details
                                                     • Loading can take up to 1 minute
-                                                    • Shows TFRs within your chosen radius (5–100 nm) of your location
-                                                    • In Manual Mode, local TFRs are centered on the selected airport
-                                                    • Also shows all VIP/SECURITY TFRs across the US
+                                                    • Choose your search radius: 5, 15, 30, 50, 75, or 100 nm
+                                                    • The "within X nm" count reflects your selected radius
+                                                    • In Manual Mode, TFRs are searched and counted around the selected airport
+                                                    • In default mode, TFRs are searched around your GPS location
+                                                    • Also shows all VIP/SECURITY TFRs across the US, regardless of radius
                                                     • International TFR data not currently available
                                                 """.trimIndent()
                                             )
